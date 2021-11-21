@@ -18,7 +18,7 @@ public class Menu {
      */
     public static int abrirMenu(Scanner entrada) {
         mostraTituloEmASC();
-        mostraOpçõesDoMenu();
+        mostraOpcoesDoMenu();
         int op = pegaEntrada(entrada);
         if (op == 2) mostraCredito();
         return op;
@@ -45,7 +45,7 @@ public class Menu {
         }
     }
 
-    private static void mostraOpçõesDoMenu() {
+    private static void mostraOpcoesDoMenu() {
         System.out.println("");
         System.out.println("");
         System.out.println("*------------------------MENU-----------------------*");
