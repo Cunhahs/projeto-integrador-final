@@ -6,6 +6,8 @@ public class Alternativa{
 				   alternativaB, 
 				   alternativaC, 
 				   alternativaD,
+				   ajuda,
+				   curiosidade,
 				   vermelha,
 				   azul,
 				   amarela,
@@ -16,12 +18,21 @@ public class Alternativa{
 				   metano,
 				   litio,
 				   hidrogenio;
+	
 
 	public String getCarbono() {
 		carbono = "carbono";
 		return carbono;
 	}
 
+	public String getAjuda() {
+		ajuda = "sim";
+		return ajuda;
+	}
+	public String getCuriosidade() {
+		curiosidade = "sim";
+		return curiosidade;
+	}
 
 	public String getLitio() {
 		litio = "lítio";

@@ -3,6 +3,8 @@
  */
 package br.com.senac.projetoIntegrador.projectFinal.principal;
 
+import java.util.Scanner;
+
 /**
  * @author Henrique 
  *

@@ -16,6 +16,8 @@ public class Menu {
      * @param entrada
      * @return int
      */
+	
+	
     public static int abrirMenu(Scanner entrada) {
         mostraTituloEmASC();
         mostraOpcoesDoMenu();
