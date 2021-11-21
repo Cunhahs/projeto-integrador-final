@@ -18,25 +18,29 @@ public class principal {
 		Questoes dez    = new Questoes();		
 		
 //Inicio Programa
+		
 		Scanner input = new Scanner(System.in);
 		String resposta;
+		int pontuacao = 0;
 		
 		
 		player jogador = new player();
 		jogador.nome = "Henrique";
 
-		
 		System.out.println("Olá " + jogador.nome);
 
 		resposta = input.nextLine();
 		resposta.equalsIgnoreCase("verde");
 		
-		System.out.println(resposta);
-		System.out.println(um.getVerde());
+		System.out.println("Se quiser jogar, digite verde");
 	
-		if(resposta == um.getVerde()) {
-			System.out.println("S");
+		if(resposta.equals(um.getVerde())) {
+			System.out.println("Simm ");
+			pontuacao++;
+				System.out.println(pontuacao);
 		}
+		
+		
 		System.out.println("Programa encerrado");
 		input.close();
 	}
