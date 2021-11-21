@@ -29,7 +29,7 @@ public class principal {
 		System.out.println("Olá " + jogador.nome);
 
 		resposta = input.nextLine();
-		resposta.equalsIgnoreCase(resposta);
+		resposta.equalsIgnoreCase("verde");
 		
 		System.out.println(resposta);
 		System.out.println(um.getVerde());
