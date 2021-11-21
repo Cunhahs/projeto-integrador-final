@@ -40,7 +40,6 @@ public class principal {
 				System.out.println(pontuacao);
 		}
 		
-		
 		System.out.println("Programa encerrado");
 		input.close();
 	}
