@@ -7,12 +7,19 @@ package br.com.senac.projetoIntegrador.projectFinal.principal;
  * @author Henrique 
  *
  */
-public class principal_class {
+public class Questoes extends Alternativa{
+	
+	private String questao;
 
 
-	public static void main(String[] args) {
-
-		
+	public String getQuestao() {
+		return questao;
 	}
 
+	public void setQuestao(String questao) {
+		this.questao = questao;
+	}
+	
 }
+
+
