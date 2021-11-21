@@ -1,6 +1,6 @@
 package br.com.senac.projetoIntegrador.projectFinal.principal;
 
-public class player {
+public class Player {
 	 
 	String nome;
 

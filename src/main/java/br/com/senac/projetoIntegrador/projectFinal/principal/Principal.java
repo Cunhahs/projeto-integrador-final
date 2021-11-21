@@ -2,7 +2,7 @@ package br.com.senac.projetoIntegrador.projectFinal.principal;
 
 import java.util.Scanner;
 
-public class principal {
+public class Principal {
 	
 	public static void main(String[] args) {
 
@@ -24,7 +24,7 @@ public class principal {
 		int pontuacao = 0;
 		
 		
-		player jogador = new player();
+		Player jogador = new Player();
 		jogador.nome = "Henrique";
 
 		System.out.println("Olá " + jogador.nome);
