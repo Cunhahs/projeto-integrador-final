@@ -109,7 +109,7 @@ rodada++;
 						+ "Cinza \r\n"
 						+ "Vermelha \r\n"
 						+ "Azul \r\n\r\n"
-						+ "Escreva cor correta: \r\n");
+						+ "Escreva a cor correta: \r\n");
 				jogador.resposta = input.nextLine();	
 
 				if(jogador.resposta.equalsIgnoreCase(questao.getAmarela())) {
@@ -126,7 +126,7 @@ rodada++;
 						System.out.println("Ok "+ jogador.nome +", vamos eliminar duas opções para você: "
 						+ "Agora, as cores que sobraram são: \r\n "
 						+ "Amarela \r\n"
-						+ "Vermelha \r\n");
+						+ "Azul \r\n");
 						System.out.println("Tente acertar novamente: ");
 						jogador.resposta = input.nextLine();	
 						if(jogador.resposta.equalsIgnoreCase(questao.getAmarela()))//Amarela {
@@ -143,25 +143,29 @@ rodada++;
 				jogador.resposta = input.nextLine();	
 				
 				if(jogador.resposta.equalsIgnoreCase(questao.getCuriosidade())) {	
-					System.out.println("Sabia que por ano oito milhões de toneladas de plástico vão parar nas águas dos /n"
-							+ "oceanos, levando 100 mil animais marinhos à morte? ");		
+					System.out.println("Essa lata demora de 200 a 500 anos para se decompor, sem contar que a reciclagem de\r\n"
+							+ "latas ajuda além do meio ambiente, a renda de várias famílias! Você consegue, muitas vidas te\r\n"
+							+ "agradecerão");		
 				}
 				
 				else {
 					System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
 				}	
 
-				System.out.println("Agora vamos para a rodada número " + rodada);
+				
 //_____________________________________________________________________________________________________________________________________//		
 				
 //Questão 3
-	rodada++;
-				System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
-						+ "Amarela \r\n"
-						+ "Cinza \r\n"
-						+ "Vermelha \r\n"
-						+ "Azul \r\n\r\n"
-						+ "Escreva cor correta: \r\n");
+				
+	rodada++;//3
+	System.out.println("Agora vamos para a rodada número " + rodada);
+	
+				System.out.println("3) Agora só faltam os copos de plástico... \r\n"
+						+ "Marrom \r\n"
+						+ "Vemelha \r\n"
+						+ "Verde  \r\n"
+						+ "Amarela \r\n\r\n"
+						+ "E agora? Consegue escrever a cor correta? digite ...\r\n");
 				jogador.resposta = input.nextLine();	
 
 				if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
@@ -184,7 +188,7 @@ rodada++;
 							jogador.resposta = input.nextLine();	
 							
 						if(jogador.resposta.equalsIgnoreCase(questao.getVermelha()))//Vermelha {
-							System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+							System.out.println("Nada como acertar após uma ajudinha né? .. Vamos para a proxima questão" );
 								pontuacao = pontuacao + 5;		
 						}else {
 							System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
@@ -197,18 +201,21 @@ rodada++;
 				jogador.resposta = input.nextLine();	
 				
 				if(jogador.resposta.equalsIgnoreCase(questao.getCuriosidade())) {	
-					System.out.println("CURIOSIDADE");		
+					System.out.println("Sabia que por ano oito milhões de toneladas de plástico vão parar nas águas dos\r\n"
+							+ "oceanos, levando 100 mil animais marinhos à morte?");
+							System.out.println("Essa curiosidade é mesmo interessante, ne ? Agora, vaamos para o próximo desafio :)");
 				}
 				
 				else {
-					System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
+					System.out.println("Tudo bem.. vamos continuar os desafio");	
 				}		
 				
 //_____________________________________________________________________________________________________________________________________//						
 //Questão 4	
-	rodada++;
 	
-	rodada++;
+	rodada++;//4
+	System.out.println("Iniciando a rodada número " + rodada);
+	
 	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
 			+ "Amarela \r\n"
 			+ "Cinza \r\n"
@@ -219,7 +226,7 @@ rodada++;
 
 	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
 		
-		System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+		System.out.println("UHUL.. Nessa você mandou bem viu ?! ");
 		pontuacao = pontuacao + 10;	
 	}
 	else {
@@ -228,7 +235,7 @@ rodada++;
 		jogador.resposta = input.nextLine();	
 		
 		if(jogador.resposta.equalsIgnoreCase(questao.getAjuda())) {
-			System.out.println("Ok "+ jogador.nome +", vamos eliminar duas opções para você: "
+			System.out.println("Ok "+ jogador.nome +", vamos eliminar duas opções para você, ok? segue: "
 			+ "Agora, as cores que sobraram são: \r\n "
 				+ "Amarela \r\n"
 					+ "Vermelha \r\n");
@@ -237,7 +244,7 @@ rodada++;
 				jogador.resposta = input.nextLine();	
 				
 			if(jogador.resposta.equalsIgnoreCase(questao.getVermelha()))//Vermelha {
-				System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+				System.out.println("Se no ENEM tivesse essas ajudas não é mesmo?!! Vamos seguir o jogo.." );
 					pontuacao = pontuacao + 5;		
 			}else {
 				System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
@@ -245,34 +252,24 @@ rodada++;
 		}
 	
 	System.out.println("Sua pontuação após a "+ rodada +"ª rodada é: "+ pontuacao);
-		
-	System.out.println("Você gostaria de conhecer uma curiosidade sobre o assunto no momento? ");
-	jogador.resposta = input.nextLine();	
+			
+
 	
-	if(jogador.resposta.equalsIgnoreCase(questao.getCuriosidade())) {	
-		System.out.println("CURIOSIDADE");		
-	}
-	
-	else {
-		System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
-	}		
 
 //_____________________________________________________________________________________________________________________________________//						
 //Questão 5
-	rodada++;
 	
-	rodada++;
-	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
-			+ "Amarela \r\n"
-			+ "Cinza \r\n"
-			+ "Vermelha \r\n"
-			+ "Azul \r\n\r\n"
-			+ "Escreva cor correta: \r\n");
+	rodada++;//5
+	System.out.println("Agora vamos para a rodada número " + rodada);
+
+	System.out.println("");
+	
+	
 	jogador.resposta = input.nextLine();	
 
 	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
 		
-		System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+		System.out.println("");
 		pontuacao = pontuacao + 10;	
 	}
 	else {
@@ -290,10 +287,10 @@ rodada++;
 				jogador.resposta = input.nextLine();	
 				
 			if(jogador.resposta.equalsIgnoreCase(questao.getVermelha()))//Vermelha {
-				System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+				System.out.println("Acertar após ajuda também é um acerto.. saiba disso.. " );
 					pontuacao = pontuacao + 5;		
 			}else {
-				System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
+				System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário.");
 			}
 		}
 	
@@ -307,20 +304,16 @@ rodada++;
 	}
 	
 	else {
-		System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
+		System.out.println("Tudo bem.. vamos para mais o desafio número 6");	
 	}		
 				
 //_____________________________________________________________________________________________________________________________________//						
 //Questão 6
-	rodada++;
 	
-	rodada++;
-	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
-			+ "Amarela \r\n"
-			+ "Cinza \r\n"
-			+ "Vermelha \r\n"
-			+ "Azul \r\n\r\n"
-			+ "Escreva cor correta: \r\n");
+	rodada++;//6
+	System.out.println("Iniciando a rodada número " + rodada);
+	
+	System.out.println("");
 	jogador.resposta = input.nextLine();	
 
 	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
@@ -360,25 +353,21 @@ rodada++;
 	}
 	
 	else {
-		System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
+		System.out.println("Tudo bem.. vamos para mais o desafio número 7");	
 	}		
 	
 //_____________________________________________________________________________________________________________________________________//						
 //Questão 7
-	rodada++;
 	
-	rodada++;
-	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
-			+ "Amarela \r\n"
-			+ "Cinza \r\n"
-			+ "Vermelha \r\n"
-			+ "Azul \r\n\r\n"
-			+ "Escreva cor correta: \r\n");
+	rodada++;//7
+	System.out.println("Iniciando a rodada número " + rodada);
+	
+	System.out.println("");
 	jogador.resposta = input.nextLine();	
 
 	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
 		
-		System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+		System.out.println(" ");
 		pontuacao = pontuacao + 10;	
 	}
 	else {
@@ -418,14 +407,10 @@ rodada++;
 	
 //_____________________________________________________________________________________________________________________________________//						
 //Questão 8
-	rodada++;
-	rodada++;
-	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
-			+ "Amarela \r\n"
-			+ "Cinza \r\n"
-			+ "Vermelha \r\n"
-			+ "Azul \r\n\r\n"
-			+ "Escreva cor correta: \r\n");
+	rodada++;//7
+	System.out.println("Iniciando a rodada número " + rodada);
+	
+	System.out.println("");
 	jogador.resposta = input.nextLine();	
 
 	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
@@ -469,14 +454,10 @@ rodada++;
 	}						
 //_____________________________________________________________________________________________________________________________________//						
 //Questão 9
-	rodada++;
-	rodada++;
-	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
-			+ "Amarela \r\n"
-			+ "Cinza \r\n"
-			+ "Vermelha \r\n"
-			+ "Azul \r\n\r\n"
-			+ "Escreva cor correta: \r\n");
+	rodada++;//9
+	System.out.println("Iniciando a rodada número " + rodada);
+	
+	System.out.println(" ");
 	jogador.resposta = input.nextLine();	
 
 	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
@@ -521,14 +502,11 @@ rodada++;
 				
 //_____________________________________________________________________________________________________________________________________//						
 //Questão 10
-	rodada++;
-	rodada++;
-	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
-			+ "Amarela \r\n"
-			+ "Cinza \r\n"
-			+ "Vermelha \r\n"
-			+ "Azul \r\n\r\n"
-			+ "Escreva cor correta: \r\n");
+	
+	rodada++;//10
+	System.out.println("Iniciando a rodada número " + rodada);
+	
+	System.out.println(" ");
 	jogador.resposta = input.nextLine();	
 
 	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
