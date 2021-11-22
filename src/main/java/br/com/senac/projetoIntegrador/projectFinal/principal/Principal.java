@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Principal {
 
     public static void main(String[] args) {
-        //Iniciando Scanner para obter respostas do jogador		
-        Scanner input = new Scanner(System.in);
-
-        if (Menu.abrirMenu(input) == 1) jogar(input);
+        if (Menu.abrirMenu() == 1) jogar();
     }
 
-    private static void jogar(Scanner input) {
+    private static void jogar() {
+        //Iniciando Scanner para obter respostas do jogador		
+        Scanner input = new Scanner(System.in);
+        
         //na classe player
         Player jogador = new Player();
         
@@ -173,7 +173,7 @@ public class Principal {
         //Questão 3
         rodada++;// 3
 
-        System.out.println("Qual a seguir é o lixo correto para os copos plásticos?" + "Marrom \r\n" + "Vermelha \r\n"
+        System.out.println("Qual a seguir é o lixo correto para os copos plásticos?" + "\r\nMarrom \r\n" + "Vermelha \r\n"
                 + "Amarela \r\n" + "Verde \r\n\r\n" + "Escreva cor correta: \r\n");
 
         jogador.resposta = input.nextLine();

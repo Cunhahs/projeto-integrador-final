@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Menu {
-    
+
     /**
      * Método retorna um interio entre 1,2 e 3 Use esse retorno para executar as
      * ações respectivas
@@ -13,40 +13,38 @@ public class Menu {
      * Exemplo: retorna 1 que significa jogar então execute suas ações para
      * abrir o jogo
      *
-     * @param entrada
      * @return int
      */
-	
-	
-    public static int abrirMenu(Scanner entrada) {
+    public static int abrirMenu() {
         mostraTituloEmASC();
         mostraOpcoesDoMenu();
-        int op = pegaEntrada(entrada);
+        int op = pegaEntrada();
         if (op == 2) {
             mostraCredito();
-            op = abrirMenu(entrada);
+            op = abrirMenu();
         }
         return op;
     }
 
-    private static int pegaEntrada(Scanner entrada) {
+    private static int pegaEntrada() {
+        Scanner entrada = new Scanner(System.in);
         int op;
         System.out.println("Digite: ");
-        try {
+        try{
             op = entrada.nextInt();
-            if(op > 3 || op <= 0){
+            if (op > 3 || op <= 0) {
                 throw new IllegalStateException("Valor inválido");
             }
             return op;
         } catch (InputMismatchException e) {
             System.out.println("Valor inválido tente novamente!");
-            return pegaEntrada(entrada);
+            return pegaEntrada();
         } catch (NoSuchElementException e) {
             System.out.println("Valor inválido tente novamente!");
-            return pegaEntrada(entrada);
-        } catch(IllegalStateException e){
-             System.out.println("Valor inválido tente novamente!");
-            return pegaEntrada(entrada);
+            return pegaEntrada();
+        } catch (IllegalStateException e) {
+            System.out.println("Valor inválido tente novamente!");
+            return pegaEntrada();
         }
     }
 
