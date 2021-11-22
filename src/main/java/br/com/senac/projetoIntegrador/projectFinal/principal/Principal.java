@@ -47,6 +47,7 @@ public class Principal {
 			+ "Ao chegar, você encontra com algumas pessoas que estão limpando sua casa depois de uma\r\n"
 			+ "festa, eles estão jogando todos os lixos no mesmo lugar.. Começe a salvar o planeta.. \r\n");
 
+rodada++;
 //Questão 1		
 		System.out.println("1) Qual o lixo para descarte para as garrafas de vidro? \r\n"
 				+ "vermelha \r\n"
@@ -82,8 +83,6 @@ public class Principal {
 				}
 			}
 		
-		
-		rodada++;
 		System.out.println("Sua pontuação após a "+ rodada +"ª rodada é: "+pontuacao);
 		
 		
@@ -101,9 +100,10 @@ public class Principal {
 		
 		
 //_____________________________________________________________________________________________________________________________________//		
-		
-		
+
 //Questão 2	
+	rodada++;		
+		
 			System.out.println("2) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
 						+ "Amarela \r\n"
 						+ "Cinza \r\n"
@@ -114,7 +114,7 @@ public class Principal {
 
 				if(jogador.resposta.equalsIgnoreCase(questao.getAmarela())) {
 					
-					System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+					System.out.println("uhuul, continue assim!");
 					pontuacao = pontuacao + 10;	
 				}
 				else {
@@ -130,14 +130,66 @@ public class Principal {
 						System.out.println("Tente acertar novamente: ");
 						jogador.resposta = input.nextLine();	
 						if(jogador.resposta.equalsIgnoreCase(questao.getAmarela()))//Amarela {
-							System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+							System.out.println("Grande resposta."+ jogador.nome +" Vamos para a próxima" );
 							pontuacao = pontuacao + 5;		
+						}else {
+							System.out.println("Opssss..  Você errou "+ jogador.nome +". Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
+						}
+					}
+				
+				System.out.println("Sua pontuação após a "+ rodada +"ª rodada é: "+ pontuacao);
+					
+				System.out.println("Você gostaria de conhecer uma curiosidade sobre o assunto no momento? ");
+				jogador.resposta = input.nextLine();	
+				
+				if(jogador.resposta.equalsIgnoreCase(questao.getCuriosidade())) {	
+					System.out.println("Sabia que por ano oito milhões de toneladas de plástico vão parar nas águas dos /n"
+							+ "oceanos, levando 100 mil animais marinhos à morte? ");		
+				}
+				
+				else {
+					System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
+				}	
+
+				System.out.println("Agora vamos para a rodada número " + rodada);
+//_____________________________________________________________________________________________________________________________________//		
+				
+//Questão 3
+	rodada++;
+				System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
+						+ "Amarela \r\n"
+						+ "Cinza \r\n"
+						+ "Vermelha \r\n"
+						+ "Azul \r\n\r\n"
+						+ "Escreva cor correta: \r\n");
+				jogador.resposta = input.nextLine();	
+
+				if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
+					
+					System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+					pontuacao = pontuacao + 10;	
+				}
+				else {
+					System.out.println("Ops, parece que você errou " + jogador.nome + "\n");
+					System.out.println(jogador.nome +" você quer uma dica?");
+					jogador.resposta = input.nextLine();	
+					
+					if(jogador.resposta.equalsIgnoreCase(questao.getAjuda())) {
+						System.out.println("Ok "+ jogador.nome +", vamos eliminar duas opções para você: "
+						+ "Agora, as cores que sobraram são: \r\n "
+							+ "Amarela \r\n"
+								+ "Vermelha \r\n");
+						
+						System.out.println("Tente acertar novamente: ");
+							jogador.resposta = input.nextLine();	
+							
+						if(jogador.resposta.equalsIgnoreCase(questao.getVermelha()))//Vermelha {
+							System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+								pontuacao = pontuacao + 5;		
 						}else {
 							System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
 						}
 					}
-						
-				rodada++;
 				
 				System.out.println("Sua pontuação após a "+ rodada +"ª rodada é: "+ pontuacao);
 					
@@ -150,8 +202,390 @@ public class Principal {
 				
 				else {
 					System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
-				}			
+				}		
+				
+//_____________________________________________________________________________________________________________________________________//						
+//Questão 4	
+	rodada++;
+	
+	rodada++;
+	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
+			+ "Amarela \r\n"
+			+ "Cinza \r\n"
+			+ "Vermelha \r\n"
+			+ "Azul \r\n\r\n"
+			+ "Escreva cor correta: \r\n");
+	jogador.resposta = input.nextLine();	
+
+	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
 		
+		System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+		pontuacao = pontuacao + 10;	
+	}
+	else {
+		System.out.println("Ops, parece que você errou " + jogador.nome + "\n");
+		System.out.println(jogador.nome +" você quer uma dica?");
+		jogador.resposta = input.nextLine();	
+		
+		if(jogador.resposta.equalsIgnoreCase(questao.getAjuda())) {
+			System.out.println("Ok "+ jogador.nome +", vamos eliminar duas opções para você: "
+			+ "Agora, as cores que sobraram são: \r\n "
+				+ "Amarela \r\n"
+					+ "Vermelha \r\n");
+			
+			System.out.println("Tente acertar novamente: ");
+				jogador.resposta = input.nextLine();	
+				
+			if(jogador.resposta.equalsIgnoreCase(questao.getVermelha()))//Vermelha {
+				System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+					pontuacao = pontuacao + 5;		
+			}else {
+				System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
+			}
+		}
+	
+	System.out.println("Sua pontuação após a "+ rodada +"ª rodada é: "+ pontuacao);
+		
+	System.out.println("Você gostaria de conhecer uma curiosidade sobre o assunto no momento? ");
+	jogador.resposta = input.nextLine();	
+	
+	if(jogador.resposta.equalsIgnoreCase(questao.getCuriosidade())) {	
+		System.out.println("CURIOSIDADE");		
+	}
+	
+	else {
+		System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
+	}		
+
+//_____________________________________________________________________________________________________________________________________//						
+//Questão 5
+	rodada++;
+	
+	rodada++;
+	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
+			+ "Amarela \r\n"
+			+ "Cinza \r\n"
+			+ "Vermelha \r\n"
+			+ "Azul \r\n\r\n"
+			+ "Escreva cor correta: \r\n");
+	jogador.resposta = input.nextLine();	
+
+	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
+		
+		System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+		pontuacao = pontuacao + 10;	
+	}
+	else {
+		System.out.println("Ops, parece que você errou " + jogador.nome + "\n");
+		System.out.println(jogador.nome +" você quer uma dica?");
+		jogador.resposta = input.nextLine();	
+		
+		if(jogador.resposta.equalsIgnoreCase(questao.getAjuda())) {
+			System.out.println("Ok "+ jogador.nome +", vamos eliminar duas opções para você: "
+			+ "Agora, as cores que sobraram são: \r\n "
+				+ "Amarela \r\n"
+					+ "Vermelha \r\n");
+			
+			System.out.println("Tente acertar novamente: ");
+				jogador.resposta = input.nextLine();	
+				
+			if(jogador.resposta.equalsIgnoreCase(questao.getVermelha()))//Vermelha {
+				System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+					pontuacao = pontuacao + 5;		
+			}else {
+				System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
+			}
+		}
+	
+	System.out.println("Sua pontuação após a "+ rodada +"ª rodada é: "+ pontuacao);
+		
+	System.out.println("Você gostaria de conhecer uma curiosidade sobre o assunto no momento? ");
+	jogador.resposta = input.nextLine();	
+	
+	if(jogador.resposta.equalsIgnoreCase(questao.getCuriosidade())) {	
+		System.out.println("CURIOSIDADE");		
+	}
+	
+	else {
+		System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
+	}		
+				
+//_____________________________________________________________________________________________________________________________________//						
+//Questão 6
+	rodada++;
+	
+	rodada++;
+	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
+			+ "Amarela \r\n"
+			+ "Cinza \r\n"
+			+ "Vermelha \r\n"
+			+ "Azul \r\n\r\n"
+			+ "Escreva cor correta: \r\n");
+	jogador.resposta = input.nextLine();	
+
+	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
+		
+		System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+		pontuacao = pontuacao + 10;	
+	}
+	else {
+		System.out.println("Ops, parece que você errou " + jogador.nome + "\n");
+		System.out.println(jogador.nome +" você quer uma dica?");
+		jogador.resposta = input.nextLine();	
+		
+		if(jogador.resposta.equalsIgnoreCase(questao.getAjuda())) {
+			System.out.println("Ok "+ jogador.nome +", vamos eliminar duas opções para você: "
+			+ "Agora, as cores que sobraram são: \r\n "
+				+ "Amarela \r\n"
+					+ "Vermelha \r\n");
+			
+			System.out.println("Tente acertar novamente: ");
+				jogador.resposta = input.nextLine();	
+				
+			if(jogador.resposta.equalsIgnoreCase(questao.getVermelha()))//Vermelha {
+				System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+					pontuacao = pontuacao + 5;		
+			}else {
+				System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
+			}
+		}
+	
+	System.out.println("Sua pontuação após a "+ rodada +"ª rodada é: "+ pontuacao);
+		
+	System.out.println("Você gostaria de conhecer uma curiosidade sobre o assunto no momento? ");
+	jogador.resposta = input.nextLine();	
+	
+	if(jogador.resposta.equalsIgnoreCase(questao.getCuriosidade())) {	
+		System.out.println("CURIOSIDADE");		
+	}
+	
+	else {
+		System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
+	}		
+	
+//_____________________________________________________________________________________________________________________________________//						
+//Questão 7
+	rodada++;
+	
+	rodada++;
+	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
+			+ "Amarela \r\n"
+			+ "Cinza \r\n"
+			+ "Vermelha \r\n"
+			+ "Azul \r\n\r\n"
+			+ "Escreva cor correta: \r\n");
+	jogador.resposta = input.nextLine();	
+
+	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
+		
+		System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+		pontuacao = pontuacao + 10;	
+	}
+	else {
+		System.out.println("Ops, parece que você errou " + jogador.nome + "\n");
+		System.out.println(jogador.nome +" você quer uma dica?");
+		jogador.resposta = input.nextLine();	
+		
+		if(jogador.resposta.equalsIgnoreCase(questao.getAjuda())) {
+			System.out.println("Ok "+ jogador.nome +", vamos eliminar duas opções para você: "
+			+ "Agora, as cores que sobraram são: \r\n "
+				+ "Amarela \r\n"
+					+ "Vermelha \r\n");
+			
+			System.out.println("Tente acertar novamente: ");
+				jogador.resposta = input.nextLine();	
+				
+			if(jogador.resposta.equalsIgnoreCase(questao.getVermelha()))//Vermelha {
+				System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+					pontuacao = pontuacao + 5;		
+			}else {
+				System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
+			}
+		}
+	
+	System.out.println("Sua pontuação após a "+ rodada +"ª rodada é: "+ pontuacao);
+		
+	System.out.println("Você gostaria de conhecer uma curiosidade sobre o assunto no momento? ");
+	jogador.resposta = input.nextLine();	
+	
+	if(jogador.resposta.equalsIgnoreCase(questao.getCuriosidade())) {	
+		System.out.println("CURIOSIDADE");		
+	}
+	
+	else {
+		System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
+	}		
+	
+//_____________________________________________________________________________________________________________________________________//						
+//Questão 8
+	rodada++;
+	rodada++;
+	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
+			+ "Amarela \r\n"
+			+ "Cinza \r\n"
+			+ "Vermelha \r\n"
+			+ "Azul \r\n\r\n"
+			+ "Escreva cor correta: \r\n");
+	jogador.resposta = input.nextLine();	
+
+	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
+		
+		System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+		pontuacao = pontuacao + 10;	
+	}
+	else {
+		System.out.println("Ops, parece que você errou " + jogador.nome + "\n");
+		System.out.println(jogador.nome +" você quer uma dica?");
+		jogador.resposta = input.nextLine();	
+		
+		if(jogador.resposta.equalsIgnoreCase(questao.getAjuda())) {
+			System.out.println("Ok "+ jogador.nome +", vamos eliminar duas opções para você: "
+			+ "Agora, as cores que sobraram são: \r\n "
+				+ "Amarela \r\n"
+					+ "Vermelha \r\n");
+			
+			System.out.println("Tente acertar novamente: ");
+				jogador.resposta = input.nextLine();	
+				
+			if(jogador.resposta.equalsIgnoreCase(questao.getVermelha()))//Vermelha {
+				System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+					pontuacao = pontuacao + 5;		
+			}else {
+				System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
+			}
+		}
+	
+	System.out.println("Sua pontuação após a "+ rodada +"ª rodada é: "+ pontuacao);
+		
+	System.out.println("Você gostaria de conhecer uma curiosidade sobre o assunto no momento? ");
+	jogador.resposta = input.nextLine();	
+	
+	if(jogador.resposta.equalsIgnoreCase(questao.getCuriosidade())) {	
+		System.out.println("CURIOSIDADE");		
+	}
+	
+	else {
+		System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
+	}						
+//_____________________________________________________________________________________________________________________________________//						
+//Questão 9
+	rodada++;
+	rodada++;
+	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
+			+ "Amarela \r\n"
+			+ "Cinza \r\n"
+			+ "Vermelha \r\n"
+			+ "Azul \r\n\r\n"
+			+ "Escreva cor correta: \r\n");
+	jogador.resposta = input.nextLine();	
+
+	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
+		
+		System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+		pontuacao = pontuacao + 10;	
+	}
+	else {
+		System.out.println("Ops, parece que você errou " + jogador.nome + "\n");
+		System.out.println(jogador.nome +" você quer uma dica?");
+		jogador.resposta = input.nextLine();	
+		
+		if(jogador.resposta.equalsIgnoreCase(questao.getAjuda())) {
+			System.out.println("Ok "+ jogador.nome +", vamos eliminar duas opções para você: "
+			+ "Agora, as cores que sobraram são: \r\n "
+				+ "Amarela \r\n"
+					+ "Vermelha \r\n");
+			
+			System.out.println("Tente acertar novamente: ");
+				jogador.resposta = input.nextLine();	
+				
+			if(jogador.resposta.equalsIgnoreCase(questao.getVermelha()))//Vermelha {
+				System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+					pontuacao = pontuacao + 5;		
+			}else {
+				System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
+			}
+		}
+	
+	System.out.println("Sua pontuação após a "+ rodada +"ª rodada é: "+ pontuacao);
+		
+	System.out.println("Você gostaria de conhecer uma curiosidade sobre o assunto no momento? ");
+	jogador.resposta = input.nextLine();	
+	
+	if(jogador.resposta.equalsIgnoreCase(questao.getCuriosidade())) {	
+		System.out.println("CURIOSIDADE");		
+	}
+	
+	else {
+		System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
+	}		
+				
+//_____________________________________________________________________________________________________________________________________//						
+//Questão 10
+	rodada++;
+	rodada++;
+	System.out.println("3) Qual o lixo para descarte para as latas de refrigerante ? \r\n"
+			+ "Amarela \r\n"
+			+ "Cinza \r\n"
+			+ "Vermelha \r\n"
+			+ "Azul \r\n\r\n"
+			+ "Escreva cor correta: \r\n");
+	jogador.resposta = input.nextLine();	
+
+	if(jogador.resposta.equalsIgnoreCase(questao.getVermelha())) {
+		
+		System.out.println("Parabéns, já vi que a população está em boas mãos, vamos para mais uma!");
+		pontuacao = pontuacao + 10;	
+	}
+	else {
+		System.out.println("Ops, parece que você errou " + jogador.nome + "\n");
+		System.out.println(jogador.nome +" você quer uma dica?");
+		jogador.resposta = input.nextLine();	
+		
+		if(jogador.resposta.equalsIgnoreCase(questao.getAjuda())) {
+			System.out.println("Ok "+ jogador.nome +", vamos eliminar duas opções para você: "
+			+ "Agora, as cores que sobraram são: \r\n "
+				+ "Amarela \r\n"
+					+ "Vermelha \r\n");
+			
+			System.out.println("Tente acertar novamente: ");
+				jogador.resposta = input.nextLine();	
+				
+			if(jogador.resposta.equalsIgnoreCase(questao.getVermelha()))//Vermelha {
+				System.out.println("UHULL, grande resposta. Vamos para a proxima questão" );
+					pontuacao = pontuacao + 5;		
+			}else {
+				System.out.println("Opssss..  Você errou. Tudo bem, ainda existem mais nove questões até o fim do questionário. Vamos para a próxima..");
+			}
+		}
+	
+	System.out.println("Sua pontuação após a "+ rodada +"ª rodada é: "+ pontuacao);
+		
+	System.out.println("Você gostaria de conhecer uma curiosidade sobre o assunto no momento? ");
+	jogador.resposta = input.nextLine();	
+	
+	if(jogador.resposta.equalsIgnoreCase(questao.getCuriosidade())) {	
+		System.out.println("CURIOSIDADE");		
+	}
+	
+	else {
+		System.out.println("Tudo bem.. vamos para mais o desafio número 3");	
+	}		
+
+//_____________________________________________________________________________________________________________________________________//						
+//Finalização
+	if(pontuacao>100) {
+		System.out.println("Parabéns, você conseguiu, as suas escolhas transformaram o planeta Terra em um lugar\r\n"
+				+ "habitável novamente");
+		
+		}else if(pontuacao<=90 && pontuacao>=60 ) {
+			System.out.println("Você conseguiu reduzir os impactos ambientais, porém não o suficiente para salvar o\r\n"
+					+ "planeta, tente novamente");
+			
+				}else {
+					System.out.println("Infelizmente suas escolhas mantiveram o planeta da forma que estava nos anos 3000,\r\n"
+							+ "tente novamente");
+				}
+
 		System.out.println("Programa encerrado");
 		
 		input.close();
