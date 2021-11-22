@@ -6,6 +6,7 @@ public class Alternativa{
 				   alternativaB, 
 				   alternativaC, 
 				   alternativaD,
+				   novamente,
 				   ajuda,
 				   curiosidade,
 				   vermelha,
@@ -29,6 +30,11 @@ public class Alternativa{
 		ajuda = "sim";
 		return ajuda;
 	}
+	public String getNovamente() {
+		novamente = "sim";
+		return novamente;
+	}
+	
 	public String getCuriosidade() {
 		curiosidade = "sim";
 		return curiosidade;
