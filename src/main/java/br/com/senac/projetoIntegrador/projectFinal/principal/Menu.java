@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class Menu {
     
     /**
-     * MÃ©todo retorna um interio entre 1,2 e 3 Use esse retorno para executar as
-     * aÃ§Ãµes respectivas
+     * Método retorna um interio entre 1,2 e 3 Use esse retorno para executar as
+     * ações respectivas
      *
-     * Exemplo: retorna 1 que significa jogar entÃ£o execute suas aÃ§Ãµes para
+     * Exemplo: retorna 1 que significa jogar então execute suas ações para
      * abrir o jogo
      *
      * @param entrada
@@ -22,7 +22,10 @@ public class Menu {
         mostraTituloEmASC();
         mostraOpcoesDoMenu();
         int op = pegaEntrada(entrada);
-        if (op == 2) mostraCredito();
+        if (op == 2) {
+            mostraCredito();
+            op = abrirMenu(entrada);
+        }
         return op;
     }
 
@@ -32,17 +35,17 @@ public class Menu {
         try {
             op = entrada.nextInt();
             if(op > 3 || op <= 0){
-                throw new IllegalStateException("Valor invÃ¡lido");
+                throw new IllegalStateException("Valor inválido");
             }
             return op;
         } catch (InputMismatchException e) {
-            System.out.println("Valor invÃ¡lido tente novamente!");
+            System.out.println("Valor inválido tente novamente!");
             return pegaEntrada(entrada);
         } catch (NoSuchElementException e) {
-            System.out.println("Valor invÃ¡lido tente novamente!");
+            System.out.println("Valor inválido tente novamente!");
             return pegaEntrada(entrada);
         } catch(IllegalStateException e){
-             System.out.println("Valor invÃ¡lido tente novamente!");
+             System.out.println("Valor inválido tente novamente!");
             return pegaEntrada(entrada);
         }
     }
@@ -53,7 +56,7 @@ public class Menu {
         System.out.println("*------------------------MENU-----------------------*");
 
         System.out.println("1 - Jogar");
-        System.out.println("2 - CrÃ©ditos");
+        System.out.println("2 - Créditos");
         System.out.println("3 - Sair");
     }
 
@@ -78,7 +81,7 @@ public class Menu {
         System.out.println("\n\nDesnvolvedores: ");
         System.out.println("Camilla Silva Carneiro");
         System.out.println("Henrique Cunha de Souza");
-        System.out.println("JosÃ© Ramalho da Silva neto");
+        System.out.println("José Ramalho da Silva neto");
         System.out.println("William Guilherme Kuntzler Schmitt");
         System.out.println("Michael Lima dos Santos\n\n");
     }
